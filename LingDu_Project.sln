@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDKJ.Dto", "LDKJ.Dto\LDKJ.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDKJ.IBLL", "LDKJ.IBLL\LDKJ.IBLL.csproj", "{7A625C35-F950-4689-A1BF-C09D38B2F78B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDKJ.BLL", "LDKJ.BLL\LDKJ.BLL.csproj", "{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7A625C35-F950-4689-A1BF-C09D38B2F78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A625C35-F950-4689-A1BF-C09D38B2F78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A625C35-F950-4689-A1BF-C09D38B2F78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,7 +44,9 @@
     <Compile Include="IAdminsMenuService.cs" />
     <Compile Include="IAdminsPermissionService.cs" />
     <Compile Include="IAdminsService.cs" />
+    <Compile Include="ICopyrightSerivce.cs" />
     <Compile Include="IRolesService.cs" />
+    <Compile Include="ISeoService.cs" />
     <Compile Include="IWebMenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

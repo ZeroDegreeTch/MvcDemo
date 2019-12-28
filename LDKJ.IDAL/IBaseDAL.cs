@@ -16,10 +16,10 @@ namespace LDKJ.IDAL
 
         Task<int> DeleteAsync(T model);
 
-        IQueryable<T> GetData<S>(Expression<Func<T,S>> orderByLambda,bool isAsc = true);
+        IQueryable<T> GetData();
 
-        IQueryable<T> GetData<S>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, S>> orderByLambda, bool isAsc = true);
+        IQueryable<T> GetDataByChoose(Expression<Func<T, bool>> whereLambda);
 
-        Task<T> GetData(int id);
+        Task<T> GetDataById(int id);
     }
 }

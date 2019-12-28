@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE3378B4-033C-4FAB-91B6-483F4895B6D5}</ProjectGuid>
+    <ProjectGuid>{02AA4AD9-AE3E-41D6-AF5F-8686D2FEF0EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LDKJ.DAL</RootNamespace>
-    <AssemblyName>LDKJ.DAL</AssemblyName>
+    <RootNamespace>LDKJ.BLL</RootNamespace>
+    <AssemblyName>LDKJ.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,14 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,17 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminsDal.cs" />
-    <Compile Include="AdminsMenuDal.cs" />
-    <Compile Include="AdminsPermissionDal.cs" />
-    <Compile Include="BaseDAL.cs" />
-    <Compile Include="CopyrightDal.cs" />
+    <Compile Include="AdminsMenuService.cs" />
+    <Compile Include="AdminsService.cs" />
+    <Compile Include="RolesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RolesDal.cs" />
-    <Compile Include="SeoDal.cs" />
-    <Compile Include="WebMenuDal.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LDKJ.DAL\LDKJ.DAL.csproj">
+      <Project>{fe3378b4-033c-4fab-91b6-483f4895b6d5}</Project>
+      <Name>LDKJ.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LDKJ.Dto\LDKJ.Dto.csproj">
+      <Project>{9c8dd740-ba30-4d76-b3ec-37824dfbf5f0}</Project>
+      <Name>LDKJ.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LDKJ.IBLL\LDKJ.IBLL.csproj">
+      <Project>{7a625c35-f950-4689-a1bf-c09d38b2f78b}</Project>
+      <Name>LDKJ.IBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LDKJ.IDAL\LDKJ.IDAL.csproj">
       <Project>{574398f4-cc86-492a-877d-9ec690e4b815}</Project>
       <Name>LDKJ.IDAL</Name>

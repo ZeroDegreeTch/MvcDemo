@@ -37,32 +37,17 @@ namespace LDKJ.DAL
             return await Db.SaveChangesAsync();
         }
 
-        public IQueryable<T> GetData<S>(Expression<Func<T, S>> orderByLambda, bool isAsc = true)
+        public IQueryable<T> GetData()
         {
-            if (isAsc)
-            {
-                return Db.Set<T>().OrderBy(orderByLambda);
-            }
-            else
-            {
-                return Db.Set<T>().OrderByDescending(orderByLambda);
-            }
+            return Db.Set<T>();
         }
 
-        public IQueryable<T> GetData<S>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, S>> orderByLambda,
-            bool isAsc = true)
+        public IQueryable<T> GetDataByChoose(Expression<Func<T, bool>> whereLambda)
         {
-            if (isAsc)
-            {
-                return Db.Set<T>().Where(whereLambda).OrderBy(orderByLambda);
-            }
-            else
-            {
-                return Db.Set<T>().Where(whereLambda).OrderByDescending(orderByLambda);
-            }
+           return Db.Set<T>().Where(whereLambda); 
         }
 
-        public async Task<T> GetData(int id)
+        public async Task<T> GetDataById(int id)
         {
             return await Db.Set<T>().FindAsync(id);
         }
